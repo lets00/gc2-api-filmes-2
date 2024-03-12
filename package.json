@@ -1,0 +1,32 @@
+{
+  "name": "gc2-filme-api",
+  "version": "1.0.0",
+  "description": "Uma API de filmes usada como base para as aulas de GC2",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit --runInBand",
+    "test:coverage": "jest --forceExit --runInBand --coverage",
+    "start": "node src/index.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "transform": {
+      ".(js|jsx|ts|tsx)": "@sucrase/jest-plugin"
+    }
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Luís Eduardo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^3.0.0",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  }
+}
