@@ -1,0 +1,23 @@
+name: meu-primeiro-workflow
+run-name: Executado por ${{github.actor}}
+on: pull_request
+jobs:
+  testando-aplicacao:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonando o repositório e trocar a branch
+        uses: actions/checkout@v4
+      
+      - name: Instalar o Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Instalar as depencias do projeto
+        run: npm i
+
+      - name: Instalar as dependencias de desenvolvimento
+        run: npm i -D
+      
+      - name: Executar os testes da aplicação
+        run: npm test
