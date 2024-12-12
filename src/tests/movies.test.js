@@ -6,6 +6,6 @@ describe('Teste do endpoint /filmes', () => {
         const resultado = await request(app).get('/filmes')
         expect(resultado.status).toBe(200)
         expect(resultado.body.length).toBe(6)
-        expect(resultado.body == null).toBe(false)
+        expect(resultado.body == null).toBe(true)
     })
 })
